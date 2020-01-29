@@ -1,0 +1,17 @@
+.navbar-dark .navbar-nav .nav-link
+
+.navbar-dark {
+    color: $light;
+
+    .navbar-nav {
+        .nav-item {
+            a {
+                color:$secondary;
+            }
+        }
+    }
+}
+
+.nav-link {
+    margin-left: 1rem;
+}
