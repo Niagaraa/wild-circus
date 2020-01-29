@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier un spectacle{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <a href="{{ path('event_index') }}" class="btn btn-secondary mt-5 mb-5">
+            <i class="fas fa-reply mr-2"></i> Retour
+        </a>
+
+        <h1 class="mb-5">Modifier l'évènement</h1>
+
+        {{ include('event/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+
+        {{ include('event/_delete_form.html.twig') }}
+    </div>
+{% endblock %}
