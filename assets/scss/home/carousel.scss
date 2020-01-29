@@ -1,0 +1,22 @@
+.carousel-item {
+    height: 100vh;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-caption {
+    top:0;
+    text-shadow: $warm 0 0 50px;
+
+    p {
+        text-shadow: $dark 0px 0px 2px;
+        width: 60%;
+    }
+}
+
+.carousel-title {
+    font-size: 10rem;
+    font-family: 'Irish Grover', cursive;
+}
