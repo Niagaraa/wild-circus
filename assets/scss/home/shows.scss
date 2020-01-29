@@ -10,7 +10,7 @@
     }
 
     .card:hover {
-        background-color: fade_out($primary, 0.1);
+        background-color: fade_out($secondary, 0.1);
 
         .card-img-top {
             opacity: 0.8;
@@ -18,12 +18,12 @@
 
         .card-title {
             color: $dark;
-            border-bottom: solid 1px $light;
-            border-top: solid 1px $light;
+            border-bottom: solid 1px $primary;
+            border-top: solid 1px $primary;
         }
 
         .card-text {
-            color:$middle;
+            color:$dark;
         }
     }
 

@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Spectacles{% endblock %}
+
+{% block body %}
+<div class="container admin">
+    <h1 class="title">Tous les spectacles</h1>
+
+    <a href="{{ path('event_new') }}" class="btn btn-secondary m-5">
+        <i class="fas fa-plus mr-2"></i> Ajouter un spectacle
+    </a>
+
+    <table class="table table-striped table-dark mb-5">
+        <thead>
+        <tr>
+            <th></th>
+            <th class="w-25">Titre du spectacle</th>
+            <th class="w-50">Description</th>
+            <th class="w-25">Photo</th>
+            <th>Ville</th>
+            <th>Date</th>
+            <th>Gestion</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for event in events %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ event.title }}</td>
+                <td>{{ event.description }}</td>
+                <td><img src="{{ event.picture }}" alt="photo du spectacle {{ event.title }}" class="w-100"></td>
+                <td>{{ event.city }}</td>
+                <td>{{ event.date }}</td>
+                <td>
+                    <a href="{{ path('event_show', {'id': event.id}) }}">show</a>
+                    <a href="{{ path('event_edit', {'id': event.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% endblock %}
