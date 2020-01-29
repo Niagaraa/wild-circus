@@ -1,0 +1,12 @@
+.navbar {
+    a {
+        color: $secondary;
+    }
+    a:hover {
+        color: lighten($secondary, 20%);
+    }
+}
+
+.nav-link {
+    margin-left: 1rem;
+}
