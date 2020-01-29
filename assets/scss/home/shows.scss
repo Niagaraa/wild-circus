@@ -1,0 +1,46 @@
+.event {
+
+    $picture-size: 30rem;
+
+    .card {
+        max-width: 100vw;
+        border: none;
+        margin: 1rem;
+        background-color: fade_out($primary, 0.7);
+    }
+
+    .card:hover {
+        background-color: fade_out($primary, 0.1);
+
+        .card-img-top {
+            opacity: 0.8;
+        }
+
+        .card-title {
+            color: $dark;
+            border-bottom: solid 1px $light;
+            border-top: solid 1px $light;
+        }
+
+        .card-text {
+            color:$middle;
+        }
+    }
+
+    .card-img-top {
+        max-width: $picture-size;
+        height: $picture-size;
+        object-fit: cover;
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-title {
+        border-top: 2px solid $dark;
+        border-bottom: 2px solid $dark;
+    }
+}
