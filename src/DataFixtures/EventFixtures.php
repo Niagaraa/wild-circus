@@ -17,7 +17,7 @@ class EventFixtures extends Fixture
             $event = new Event();
 
             $event->setTitle($faker->text(30));
-            $event->setDate($faker->date('d/m/Y'));
+            $event->setDate($faker->dateTime);
             $event->setPicture($faker->imageUrl(500, 300, 'nightlife'));
             $event->setDescription($faker->paragraph);
             $event->setCity($faker->city);
