@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Troupe</h2>
+
+    <div class="d-flex justify-content-center mt-5">
+        {% for troop in troops %}
+            <div class="d-flex flex-column align-items-center">
+                <div class="m-4 d-flex justify-content-center align-items-center">
+                    <div class="troop-back"></div>
+                    <img src="{{ troop.picture }}" alt="" class="troop-member rounded-circle">
+                </div>
+                <h3 class="mt-n4">{{ troop.alias }}</h3>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="d-flex justify-content-center m-5">
+        <a href="{{ path('troop_list') }}" class="btn btn-secondary">
+            <i class="fas fa-users mr-2"></i> Voir toute la troupe
+        </a>
+    </div>
+</div>

@@ -27,6 +27,7 @@ body {
 h1 {
     @include title-font;
     color:$primary;
+    font-size: calc(2rem + 3vw);
 }
 
 h2 {
@@ -35,10 +36,11 @@ h2 {
     font-size: calc(2.5rem + 3.5vw);
     text-align: center;
     margin: 2rem;
+    margin-top: 3rem;
 }
 
 h3 {
     @include title-font;
     color: $middle;
-    font-size: 3rem;
+    font-size: calc(1.5rem + 1.5vw)
 }
