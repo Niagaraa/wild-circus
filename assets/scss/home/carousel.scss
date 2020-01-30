@@ -17,6 +17,14 @@
 }
 
 .carousel-title {
-    font-size: 10rem;
     font-family: 'Irish Grover', cursive;
+    color:#fff;
+    font-size: 10rem;
+}
+
+.carousel {
+
+    img {
+        box-shadow: 0 -20px 2px $dark inset;
+    }
 }

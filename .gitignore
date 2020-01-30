@@ -1,4 +1,5 @@
 .idea/
+/Migrations/
 
 ###> symfony/framework-bundle ###
 /.env.local

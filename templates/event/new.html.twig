@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau spectacle{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <a href="{{ path('event_index') }}" class="btn btn-secondary">
+            <i class="fas fa-reply mr-2"></i> Retour
+        </a>
+
+        <h1 class="mt-5 mb-5">Ajouter un spectacle</h1>
+
+        {{ include('event/_form.html.twig') }}
+
+    </div>
+{% endblock %}
