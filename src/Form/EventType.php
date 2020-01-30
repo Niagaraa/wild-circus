@@ -31,7 +31,8 @@ class EventType extends AbstractType
                 'choice_label' => 'alias',
                 'label' => 'Participants',
                 'multiple' => true,
-                'expanded' => true
+                'expanded' => true,
+                'by_reference' => false
             ])
         ;
     }
