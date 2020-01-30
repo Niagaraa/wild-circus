@@ -3,3 +3,12 @@
     max-width:50rem;
     object-fit: cover;
 }
+
+.listing {
+    column-count:4;
+    column-fill: balance;
+
+    .col-form-label {
+        margin-bottom: 2rem;
+    }
+}

@@ -23,11 +23,11 @@
                 <td>{{ event.date|date('d/m/Y H:i') }}</td>
             </tr>
             <tr>
-                <th>City</th>
+                <th>Ville</th>
                 <td>{{ event.city }}</td>
             </tr>
             <tr>
-                <th>Title</th>
+                <th>Titre</th>
                 <td>{{ event.title }}</td>
             </tr>
             <tr>
@@ -35,8 +35,22 @@
                 <td>{{ event.description }}</td>
             </tr>
             <tr>
-                <th>Picture</th>
+                <th>Illustration</th>
                 <td><img src="{{ event.picture }}" alt="Photo de {{ event.title }}" class="picture-show"></td>
+            </tr>
+            <tr>
+                <th>Participants</th>
+                <td>
+                    <ul>
+                        <li class="listing">
+                            {% for member in event.members %}
+                                {{ member.alias }}
+                            {% else %}
+                                Aucun participant enregistré
+                            {% endfor %}
+                        </li>
+                    </ul>
+                </td>
             </tr>
             </tbody>
         </table>
