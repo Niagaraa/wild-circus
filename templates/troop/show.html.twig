@@ -34,6 +34,19 @@
                 <th>Art</th>
                 <td>{{ troop.speciality }}</td>
             </tr>
+            <tr>
+                <th>Participe à</th>
+                <td>
+                    <ul>
+                        {% for event in troop.event %}
+                            <li>{{ event.title }}</li>
+                            {% else %}
+                            Aucun spectacle
+                        {% endfor %}
+                    </ul>
+
+                </td>
+            </tr>
             </tbody>
         </table>
 

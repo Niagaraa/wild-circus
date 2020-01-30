@@ -41,14 +41,16 @@
             <tr>
                 <th>Participants</th>
                 <td>
-                    <ul>
-                        <li class="listing">
-                            {% for member in event.members %}
-                                {{ member.alias }}
-                            {% else %}
-                                Aucun participant enregistré
-                            {% endfor %}
-                        </li>
+                    <ul class="listing">
+                        {% for member in event.members %}
+                            <li>
+                                <a href="{{ path('troop_show', {'id':member.id}) }}">
+                                    {{ member.alias }}
+                                </a>
+                            </li>
+                        {% else %}
+                            Aucun participant enregistré
+                        {% endfor %}
                     </ul>
                 </td>
             </tr>
