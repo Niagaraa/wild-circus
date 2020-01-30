@@ -31,11 +31,14 @@
                 <td><img src="{{ event.picture }}" alt="photo du spectacle {{ event.title }}" class="w-100"></td>
                 <td>{{ event.city }}</td>
                 <td>{{ event.date|date('d/m/Y H:i') }}</td>
-                <td>
-                    <a href="{{ path('event_show', {'id': event.id}) }}">show</a>
+                <td class="buttons align-middle">
+                    <a href="{{ path('event_show', {'id': event.id}) }}" class="btn btn-secondary">
+                        <i class="far fa-eye mr-2"></i> En savoir plus
+                    </a>
                     <a href="{{ path('event_edit', {'id': event.id}) }}" class="btn btn-secondary mt-2">
                         <i class="fas fa-cogs mr-2"></i> Modifier
                     </a>
+                    {{ include('event/_delete_form.html.twig') }}
                 </td>
             </tr>
         {% else %}
