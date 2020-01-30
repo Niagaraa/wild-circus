@@ -2,10 +2,8 @@ footer {
     width: 100%;
     position: relative;
     bottom:0;
-}
-
-.footer {
-    border-top: solid 1px darken($dark, 50%);
+    background-color: darken($dark, 1%);
+    color:lighten($secondary, 10%)
 }
 
 .page-footer {
@@ -14,6 +12,7 @@ footer {
     }
 }
 
-.footer-copyright {
+.footer-bottom {
     font-size:1.5rem;
+    background-color: darken($dark, 3%)
 }
