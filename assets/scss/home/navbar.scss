@@ -1,9 +1,14 @@
-.navbar {
-    a {
-        color: $secondary;
-    }
-    a:hover {
-        color: lighten($secondary, 20%);
+.navbar-dark .navbar-nav .nav-link
+
+.navbar-dark {
+    color: $light;
+
+    .navbar-nav {
+        .nav-item {
+            a {
+                color:$secondary;
+            }
+        }
     }
 }
 
