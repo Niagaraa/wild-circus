@@ -15,7 +15,6 @@
         <tr>
             <th></th>
             <th class="w-25">Titre du spectacle</th>
-            <th class="w-50 align-middle">Description</th>
             <th class="w-25 align-middle">Photo</th>
             <th class="align-middle">Ville</th>
             <th class="align-middle">Date</th>
@@ -27,7 +26,6 @@
             <tr>
                 <td>{{ loop.index }}</td>
                 <td>{{ event.title }}</td>
-                <td>{{ event.description }}</td>
                 <td><img src="{{ event.picture }}" alt="photo du spectacle {{ event.title }}" class="w-100"></td>
                 <td>{{ event.city }}</td>
                 <td>{{ event.date|date('d/m/Y H:i') }}</td>
