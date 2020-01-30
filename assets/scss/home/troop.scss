@@ -1,3 +1,12 @@
+.troop {
+
+    h3 {
+        z-index: 1;
+        text-shadow: $dark 1px 1px 2px;
+    }
+
+}
+
 $picture-size: 20rem;
 
 .troop-back {
@@ -10,21 +19,26 @@ $picture-size: 20rem;
 
 .troop-member {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     width: $picture-size;
     height: $picture-size;
     object-fit: cover;
 }
 
 .troop-member:hover {
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
-.troop {
+.troop-list {
+    margin-top: 5rem;
+}
 
-    h3 {
-        z-index: 1;
-        text-shadow: $dark 1px 1px 2px;
-    }
-
+.troop-infos {
+    position: absolute;
+    color: $dark
+;
+    opacity: 1;
+    font-size:2.5rem;
+    width: min-content;
+    text-align: center;
 }
