@@ -9,6 +9,31 @@
         background-color: fade_out($primary, 0.7);
     }
 
+    .card-img-top {
+        max-width: $picture-size;
+        height: $picture-size;
+        object-fit: cover;
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-title {
+        border-top: 2px solid $dark;
+        border-bottom: 2px solid $dark;
+    }
+
+    .date {
+        position: absolute;
+        background-color: $middle;
+        color:$dark;
+        width:10rem;
+        padding: 0.5rem;
+    }
+
     .card:hover {
         background-color: fade_out($secondary, 0.1);
 
@@ -25,22 +50,9 @@
         .card-text {
             color:$dark;
         }
-    }
 
-    .card-img-top {
-        max-width: $picture-size;
-        height: $picture-size;
-        object-fit: cover;
-    }
-
-    .card-body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .card-title {
-        border-top: 2px solid $dark;
-        border-bottom: 2px solid $dark;
+        .date {
+            background-color: opacify($secondary, 1);
+        }
     }
 }
