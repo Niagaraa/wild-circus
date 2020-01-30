@@ -1,0 +1,18 @@
+footer {
+    width: 100%;
+    position: relative;
+    bottom:0;
+    background-color: darken($dark, 1%);
+    color:lighten($secondary, 10%)
+}
+
+.page-footer {
+    .bg-dark {
+        background-color: darken($dark, 50%);
+    }
+}
+
+.footer-bottom {
+    font-size:1.5rem;
+    background-color: darken($dark, 3%)
+}

@@ -2,57 +2,52 @@
 
     $picture-size: 30rem;
 
+    .card-back {
+        height: $picture-size / 2;
+        width: $picture-size / 2;
+        transform: rotate(45deg);
+        position: absolute;
+        z-index: 0;
+    }
+
     .card {
         max-width: 100vw;
         border: none;
         margin: 1rem;
         background-color: fade_out($primary, 0.7);
+        z-index: 1;
+        margin-bottom: 4rem;
     }
 
-    .card-img-top {
-        max-width: $picture-size;
-        height: $picture-size;
-        object-fit: cover;
+    .card-image {
+        background: no-repeat;
+        background-size: cover;
     }
 
     .card-body {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        background-color: fade_out($dark, 0.4);
     }
 
     .card-title {
-        border-top: 2px solid $dark;
         border-bottom: 2px solid $dark;
-    }
-
-    .date {
-        position: absolute;
-        background-color: $middle;
-        color:$dark;
-        width:10rem;
-        padding: 0.5rem;
+        mix-blend-mode: luminosity;
     }
 
     .card:hover {
-        background-color: fade_out($secondary, 0.1);
+        //border: $secondary solid 2px;
+        //box-shadow: $secondary 1px 1px 20px;
 
-        .card-img-top {
-            opacity: 0.8;
+        .card-body {
+            background-color: transparent;
         }
 
         .card-title {
-            color: $dark;
             border-bottom: solid 1px $primary;
-            border-top: solid 1px $primary;
+            text-shadow: $dark 0 0 20px;
         }
 
-        .card-text {
-            color:$dark;
-        }
-
-        .date {
-            background-color: opacify($secondary, 1);
-        }
     }
 }
