@@ -1,0 +1,41 @@
+{% extends 'layout_admin.html.twig' %}
+
+{% block title %}{{ troop.alias }}{% endblock %}
+
+{% block body %}
+    <div class="container admin">
+
+        <a href="{{ path('troop_index') }}" class="btn btn-secondary mt-5 mb-5">
+            <i class="fas fa-reply mr-2"></i> Retour
+        </a>
+
+        <div class="d-flex align-items-center mb-5">
+            <h1>{{ troop.alias }}</h1>
+            <a href="{{ path('troop_edit', {'id': troop.id}) }}" class="btn btn-secondary ml-3">
+                <i class="fas fa-cog mr-2"></i> Modifier
+            </a>
+        </div>
+
+        <table class="table table-striped table-dark">
+            <tbody>
+            <tr>
+                <th>Pseudo</th>
+                <td>{{ troop.alias }}</td>
+            </tr>
+            <tr>
+                <th>Prénom Nom</th>
+                <td>{{ troop.name }}</td>
+            </tr>
+            <tr>
+                <th>Photo</th>
+                <td><img src="{{ troop.picture }}" alt="{{ troop.alias }}" class="picture-show"></td>
+            </tr>
+            <tr>
+                <th>Art</th>
+                <td>{{ troop.speciality }}</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+{% endblock %}
