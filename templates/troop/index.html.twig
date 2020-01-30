@@ -30,10 +30,10 @@
                 <td><img src="{{ troop.picture }}" alt="photo du spectacle {{ troop.alias }}" class="w-100"></td>
                 <td>{{ troop.speciality }}</td>
                 <td class="buttons align-middle">
-                    <a href="{{ path('event_show', {'id': troop.id}) }}" class="btn btn-secondary">
+                    <a href="{{ path('troop_show', {'id': troop.id}) }}" class="btn btn-secondary">
                         <i class="far fa-eye mr-2"></i> En savoir plus
                     </a>
-                    <a href="{{ path('event_edit', {'id': troop.id}) }}" class="btn btn-secondary mt-2">
+                    <a href="{{ path('troop_edit', {'id': troop.id}) }}" class="btn btn-secondary mt-2">
                         <i class="fas fa-cogs mr-2"></i> Modifier
                     </a>
                     {{ include('troop/_delete_form.html.twig') }}
