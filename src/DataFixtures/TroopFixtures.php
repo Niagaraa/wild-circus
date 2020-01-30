@@ -18,7 +18,7 @@ class TroopFixtures extends Fixture
 
             $troop->setName($faker->name());
             $troop->setAlias($faker->title.$faker->lastName);
-            $troop->setPicture($faker->imageUrl(500, 300, 'nightlife'));
+            $troop->setPicture($faker->imageUrl(500, 300, 'people'));
             $troop->setSpeciality($faker->jobTitle);
 
             $manager->persist($troop);
