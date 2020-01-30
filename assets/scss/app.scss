@@ -27,6 +27,7 @@ body {
 h1 {
     @include title-font;
     color:$primary;
+    font-size: calc(2rem + 3vw);
 }
 
 h2 {
