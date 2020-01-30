@@ -1,0 +1,51 @@
+{% extends 'layout_admin.html.twig' %}
+
+{% block title %}Troop index{% endblock %}
+
+{% block body %}
+<div class="container admin">
+    <h1>Toute la troupe</h1>
+
+    <a href="{{ path('troop_new') }}" class="btn btn-secondary m-5">
+        <i class="fas fa-plus mr-2"></i> Ajouter un membre
+    </a>
+
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Pseudo</th>
+                <th class="w-25">Prénom Nom</th>
+                <th>Photo</th>
+                <th>Art</th>
+                <th>Gestion</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for troop in troops %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ troop.alias }}</td>
+                <td>{{ troop.name }}</td>
+                <td><img src="{{ troop.picture }}" alt="photo du spectacle {{ troop.alias }}" class="w-100"></td>
+                <td>{{ troop.speciality }}</td>
+                <td class="buttons align-middle">
+                    <a href="{{ path('event_show', {'id': troop.id}) }}" class="btn btn-secondary">
+                        <i class="far fa-eye mr-2"></i> En savoir plus
+                    </a>
+                    <a href="{{ path('event_edit', {'id': troop.id}) }}" class="btn btn-secondary mt-2">
+                        <i class="fas fa-cogs mr-2"></i> Modifier
+                    </a>
+                    {{ include('troop/_delete_form.html.twig') }}
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}
