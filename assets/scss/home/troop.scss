@@ -9,10 +9,13 @@
 
 $picture-size: 20rem;
 
+.bloc-pic {
+    margin: 2rem;
+}
+
 .troop-back {
-    background-color: darken($secondary, 10%);
-    width: $picture-size - 0.5;
-    height: $picture-size - 0.5;
+    width: $picture-size - 3;
+    height: $picture-size - 3;
     position: absolute;
     transform: rotate(45deg);
 }
