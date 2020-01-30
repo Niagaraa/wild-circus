@@ -1,0 +1,30 @@
+$picture-size: 20rem;
+
+.troop-back {
+    background-color: darken($secondary, 10%);
+    width: $picture-size - 0.5;
+    height: $picture-size - 0.5;
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+.troop-member {
+    position: relative;
+    z-index: 1;
+    width: $picture-size;
+    height: $picture-size;
+    object-fit: cover;
+}
+
+.troop-member:hover {
+    opacity: 0.8;
+}
+
+.troop {
+
+    h3 {
+        z-index: 1;
+        text-shadow: $dark 1px 1px 2px;
+    }
+
+}
