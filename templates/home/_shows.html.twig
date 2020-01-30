@@ -13,7 +13,7 @@
                         {{ event.date|date('d/m/Y, H:i') }}
                     </div>
                     <h3 class="card-title"><strong>{{ event.title }}</strong></h3>
-                    <p>{{ event.description }}</p>
+                    <p>{{ event.description|truncate(300) }}</p>
                     <a class="btn btn-{{ loop.index0 is even ? 'secondary' : 'primary' }}"><i
                                 class="fas fa-clone left"></i> En savoir plus</a>
                 </div>
