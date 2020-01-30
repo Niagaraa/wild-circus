@@ -6,9 +6,39 @@
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
 @import "home";
+@import "admin";
+
+@mixin title-font {
+    font-family: 'Irish Grover', cursive;
+}
 
 body {
     background-color: $dark;
     font-family: 'Roboto', sans-serif;
     font-size: 16pt;
+    color:$secondary;
+    background-image: url("https://zupimages.net/up/20/05/4b9t.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin-top: 3rem;
+}
+
+h1 {
+    @include title-font;
+    color:$primary;
+}
+
+h2 {
+    @include title-font;
+    color: $primary;
+    font-size: calc(2.5rem + 3.5vw);
+    text-align: center;
+    margin: 2rem;
+}
+
+h3 {
+    @include title-font;
+    color: $middle;
+    font-size: 3rem;
 }

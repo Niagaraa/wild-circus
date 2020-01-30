@@ -1,0 +1,23 @@
+@import "admin/shows";
+
+.admin {
+
+    h1 {
+        font-size: calc(2.5rem + 2.5vw);
+    }
+
+    .table-dark {
+        background-color: $dark;
+        color:lighten($secondary, 50%);
+
+        th {
+            color: $secondary;
+        }
+    }
+
+    .buttons {
+        .btn {
+            width: 10rem;
+        }
+    }
+}

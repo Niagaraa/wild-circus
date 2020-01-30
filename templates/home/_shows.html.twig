@@ -1,0 +1,23 @@
+<div class="container">
+
+    <h2>Spectacles</h2>
+
+    {% for event in events %}
+        <div class="row no-gutters">
+            <div class="col-12">
+                <div class="card flex-column flex-md-row">
+                    <img class="card-img-top order-{{ loop.index0 is even ? 0 : 1 }}" src="{{ event.picture }}"
+                         alt="Card image cap">
+                    <div class="date mt-3 d-flex flex-column">
+                        <small>{{ event.date|date('d/m/Y') }}</small>
+                        <small>{{ event.date|date('H:i') }}</small>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-5">{{ event.title }}</h3>
+                        <p class="card-text">{{ event.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
