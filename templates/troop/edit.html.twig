@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modiier un membre{% endblock %}
+
+{% block body %}
+    <div class="container admin">
+
+        <a href="{{ path('troop_index') }}" class="btn btn-secondary mt-5 mb-5">
+            <i class="fas fa-reply mr-2"></i> Retour
+        </a>
+
+        <h1>Modifier le membre</h1>
+
+        {{ include('troop/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+
+    </div>
+{% endblock %}
