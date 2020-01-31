@@ -45,3 +45,21 @@ $picture-size: 20rem;
     width: min-content;
     text-align: center;
 }
+
+@media screen and (max-width: 575px){
+
+    .bloc-pic {
+        margin-bottom: 10rem;
+    }
+
+    .troop-back {
+        width: $picture-size /1.5;
+        height: $picture-size /1.5;
+    }
+
+    .troop-member {
+        width: $picture-size - 5;
+        height: $picture-size - 5;
+    }
+
+}

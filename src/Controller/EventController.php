@@ -16,7 +16,7 @@ class EventController extends AbstractController
 
     public function show(Event $event):Response
     {
-        return $this->render('home/troop_details.html.twig', [
+        return $this->render('home/event_details.html.twig', [
             'event' => $event
         ]);
     }
