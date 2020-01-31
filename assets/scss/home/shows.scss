@@ -37,9 +37,6 @@
     }
 
     .card:hover {
-        //border: $secondary solid 2px;
-        //box-shadow: $secondary 1px 1px 20px;
-
         .card-body {
             background-color: transparent;
         }
@@ -47,6 +44,10 @@
         .card-title {
             border-bottom: solid 1px $primary;
             text-shadow: $dark 0 0 20px;
+        }
+
+        p {
+            color: transparent;
         }
 
     }

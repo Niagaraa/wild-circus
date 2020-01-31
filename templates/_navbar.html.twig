@@ -3,15 +3,18 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
+        <a href="{{ path('index') }}" class="navbar navbar-brand">
+            <img src="{{ asset('build/images/brand.png')}}" alt="Accueil" class="brand">
+        </a>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#spectacles">Spectacles</a>
+                <a class="nav-link" href="{{ path('index') }}#spectacles">Spectacles</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#troupe">Troupe</a>
+                <a class="nav-link" href="{{ path('index') }}#troupe">Troupe</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#tarifs">Tarifs</a>
+                <a class="nav-link" href="{{ path('index') }}#tarifs">Tarifs</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Connexion</a>
