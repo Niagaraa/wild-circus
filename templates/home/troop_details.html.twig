@@ -1,0 +1,47 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    <div class="details">
+
+        <div id="carouselExampleControls" class="carousel slide d-none d-lg-block" data-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                    <h1 class="carousel-title">{{ event.title }}</h1>
+                </div>
+
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="{{ event.picture }}" alt="{{ event.title }}">
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-dark d-flex justify-content-center align-items-center flex-column p-5">
+            <p class="w-75 text-center">
+                <span>{{ event.title }}</span> <br>
+                sera joué à
+                <span>{{ event.city }}</span> <br>
+                le <span>{{ event.date|date('d/m/Y') }}</span> à
+                <span>{{ event.date|date('H') }}h{{ event.date|date('i') }}</span>
+            </p>
+
+            <p class="w-75 mt-5 text-justify">{{ event.description }}</p>
+        </div>
+
+        <div class="container">
+            <h2 class="mb-5">Il vont mettre des paillettes dans vos vies</h2>
+
+            {% for member in event.members %}
+                <div class="d-flex justify-content-around align-items-center troop-list">
+                    <div class="m-4 d-flex justify-content-center align-items-center order-{{ loop.index0 is even ? 0 : 1 }}">
+                        <div class="troop-back bg-{{ loop.index0 is even ? 'secondary' : 'primary' }}"></div>
+                        <img src="{{ member.picture }}" alt="{{ member.alias }}" class="troop-member">
+                    </div>
+                    <h3>{{ member.alias }}</h3>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+{% endblock %}

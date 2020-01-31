@@ -1,0 +1,32 @@
+.details {
+    .carousel-title {
+        font-size: calc(1.5rem + 3vw);
+    }
+
+    .container-fluid, .container {
+        margin-top: 10rem;
+    }
+
+    .container {
+        margin-bottom: 10rem;
+    }
+
+    span {
+        font-family: 'Oswald', sans-serif;
+        font-size: x-large;
+        text-transform: uppercase;
+        color:$primary;
+    }
+
+    h3 {
+        text-transform: uppercase;
+        border-bottom: $middle 3px solid;
+        padding: 5rem;
+        width: 20rem;
+        text-align: center;
+    }
+
+    .troop-member:hover {
+        opacity: 1;
+    }
+}
