@@ -9,13 +9,14 @@
 
             <div class="card-body text-white text-center d-flex align-items-center p-5 px-4">
                 <div>
-                    <div class="float-right p-2 bg-{{ loop.index0 is even ? 'secondary' : 'primary' }}">
+                    <div class="float-right mt-n5 mr-n5 mb-4 p-2 bg-{{ loop.index0 is even ? 'secondary' : 'primary' }}">
                         {{ event.date|date('d/m/Y, H:i') }}
                     </div>
                     <h3 class="card-title"><strong>{{ event.title }}</strong></h3>
-                    <p>{{ event.description|truncate(300) }}</p>
-                    <a class="btn btn-{{ loop.index0 is even ? 'secondary' : 'primary' }}"><i
-                                class="fas fa-clone left"></i> En savoir plus</a>
+                    <p>{{ event.description|truncate(280) }}</p>
+                    <a class="btn btn-{{ loop.index0 is even ? 'secondary' : 'primary' }}"
+                       href="{{ path('event_details', {'id': event.id }) }}">
+                        <i class="fas fa-clone left"></i> En savoir plus</a>
                 </div>
             </div>
 
