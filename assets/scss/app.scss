@@ -53,5 +53,5 @@ h2 {
 h3 {
     @include second-title;
     color: $middle;
-    font-size: calc(1rem + 1vw)
+    font-size: calc(2rem + 1vw)
 }
