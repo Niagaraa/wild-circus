@@ -14,8 +14,8 @@ $picture-size: 20rem;
 }
 
 .troop-back {
-    width: $picture-size - 3;
-    height: $picture-size - 3;
+    width: $picture-size ;
+    height: $picture-size;
     position: absolute;
     transform: rotate(45deg);
 }
