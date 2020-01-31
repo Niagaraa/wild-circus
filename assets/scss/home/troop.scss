@@ -14,8 +14,8 @@ $picture-size: 20rem;
 }
 
 .troop-back {
-    width: $picture-size - 3;
-    height: $picture-size - 3;
+    width: $picture-size ;
+    height: $picture-size;
     position: absolute;
     transform: rotate(45deg);
 }
@@ -44,4 +44,22 @@ $picture-size: 20rem;
     font-size:2.5rem;
     width: min-content;
     text-align: center;
+}
+
+@media screen and (max-width: 575px){
+
+    .bloc-pic {
+        margin-bottom: 10rem;
+    }
+
+    .troop-back {
+        width: $picture-size /1.5;
+        height: $picture-size /1.5;
+    }
+
+    .troop-member {
+        width: $picture-size - 5;
+        height: $picture-size - 5;
+    }
+
 }

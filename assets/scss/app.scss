@@ -45,13 +45,13 @@ h2 {
     color: $primary;
     font-size: calc(1.1rem + 3vw);
     text-align: center;
-    margin: 2rem;
-    margin-top: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
     text-transform: uppercase;
 }
 
 h3 {
     @include second-title;
     color: $middle;
-    font-size: calc(1rem + 1vw)
+    font-size: calc(2rem + 1vw)
 }

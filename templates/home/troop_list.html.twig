@@ -18,9 +18,9 @@
                 {% for troop in troops %}
                     <div class="d-flex flex-column align-items-center troop-list">
                         <div class="m-4 d-flex justify-content-center align-items-center">
-                            <div class="troop-back"></div>
+                            <div class="troop-back bg-secondary"></div>
                             <p class="troop-infos">{{ troop.speciality }}</p>
-                            <img src="{{ troop.picture }}" alt="" class="troop-member rounded-circle">
+                            <img src="{{ troop.picture }}" alt="" class="troop-member">
                         </div>
                         <h3 class="mt-n4">{{ troop.alias }}</h3>
                     </div>

@@ -17,7 +17,7 @@
         </div>
 
         <div class="container-fluid bg-dark d-flex justify-content-center align-items-center flex-column p-5">
-            <p class="w-75 text-center">
+            <p class="infos text-center">
                 <span>{{ event.title }}</span> <br>
                 sera joué à
                 <span>{{ event.city }}</span> <br>
@@ -25,14 +25,15 @@
                 <span>{{ event.date|date('H') }}h{{ event.date|date('i') }}</span>
             </p>
 
-            <p class="w-75 mt-5 text-justify">{{ event.description }}</p>
+            <p class="infos mt-5 text-justify">{{ event.description }}</p>
         </div>
 
         <div class="container">
             <h2 class="mb-5">Il vont mettre des paillettes dans vos vies</h2>
 
+
             {% for member in event.members %}
-                <div class="d-flex justify-content-around align-items-center troop-list">
+                <div class="d-flex justify-content-around align-items-center troop-list flex-wrap">
                     <div class="m-4 d-flex justify-content-center align-items-center order-{{ loop.index0 is even ? 0 : 1 }}">
                         <div class="troop-back bg-{{ loop.index0 is even ? 'secondary' : 'primary' }}"></div>
                         <img src="{{ member.picture }}" alt="{{ member.alias }}" class="troop-member">

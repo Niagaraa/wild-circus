@@ -16,7 +16,7 @@
         margin: 1rem;
         background-color: fade_out($primary, 0.7);
         z-index: 1;
-        margin-bottom: 4rem;
+        margin-bottom: 6rem;
     }
 
     .card-image {
@@ -36,6 +36,10 @@
         mix-blend-mode: luminosity;
     }
 
+    .infos {
+        width: 75%;
+    }
+
     .card:hover {
         .card-body {
             background-color: transparent;
@@ -50,5 +54,17 @@
             color: transparent;
         }
 
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .infos {
+        width: 100%;
+    }
+
+    .details {
+        .container-fluid {
+            margin-top: 3rem;
+        }
     }
 }
